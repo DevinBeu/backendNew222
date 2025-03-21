@@ -97,7 +97,7 @@ app.get("/api/info", (req, res) => {
   res.send(`<h2>Phonebook currently has info for ${length} people.</h2>`);
 });
 
-const PORT = 3002;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
-  console.log(`server is running on ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
